@@ -1,0 +1,22 @@
+# Ignore object files
+*.o
+
+# Ignore libraries
+*.lib
+*.a
+
+# Ignore binary files
+*.bin
+*.exe
+*.out
+
+# Ignore CLion IDE specific files
+.idea/
+
+# Ignore build directory
+build/
+
+# Ignore other files
+*.swp
+*~
+*.bak
