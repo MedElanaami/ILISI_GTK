@@ -20,3 +20,4 @@ build/
 *.swp
 *~
 *.bakcmake-build-debug/
+cmake-build-debug/
