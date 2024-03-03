@@ -18,7 +18,9 @@ add_executable(ILISI_GTK main.c
         lib/structure.h
         lib/global.h
         src/app.c
-        lib/app.h)
+        lib/app.h
+        src/zoneTexte.c
+        lib/zoneTexte.h)
 
 
 # Link against GTK3 libraries
