@@ -1,5 +1,5 @@
 #include <gtk/gtk.h>
-#include "src/Macros/structure.h" // Include the header file for Fenetre structure and its functions
+#include "lib/fenetre.h" // Include the header file for Fenetre structure and its functions
 
 int main(int argc, char *argv[]) {
     Fenetre *fenetre;
@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
     fenetre = fenetre_new("1", TRUE);
 
     // Set the Fenetre title
-    fenetre_set_title(fenetre, "Fenetre Window");
+    fenetre_set_title(fenetre, "ILISI GTK");
 
     // Set the Fenetre size
     Taille size = {200, 200};
