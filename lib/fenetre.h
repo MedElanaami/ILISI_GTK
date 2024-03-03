@@ -2,8 +2,6 @@
 #ifndef ILISI_GTK_FENETRE_H
 #define ILISI_GTK_FENETRE_H
 
-#include <gtk/gtk.h>
-#include "global.h"
 //prototypes des fonctions
 Fenetre* fenetre_new(char*id,int type);
 void fenetre_set_title(Fenetre *fenetre,gchar *titre);

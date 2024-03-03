@@ -1,6 +1,4 @@
-#include <gtk/gtk.h>
-#include "../lib/app.h"
-#include "../lib/fenetre.h"
+#include "../lib/global.h"
 
 void start_app(int *argc, char ***argv) {
     Fenetre *fenetre;

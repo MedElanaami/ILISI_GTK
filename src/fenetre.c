@@ -1,6 +1,5 @@
 
-#include "../lib/fenetre.h"
-
+#include "../lib/global.h"
 
 // Function to create a new Fenetre
 // Function to create a new Fenetre with default values
