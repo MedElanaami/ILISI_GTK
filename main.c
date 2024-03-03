@@ -1,5 +1,5 @@
 #include <gtk/gtk.h>
-#include "src/Macros/structure.h" // Include the header file for Fenetre structure and its functions
+#include "lib/fenetre.h" // Include the header file for Fenetre structure and its functions
 
 int main(int argc, char *argv[]) {
     Fenetre *fenetre;

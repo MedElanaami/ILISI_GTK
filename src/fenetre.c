@@ -1,5 +1,7 @@
 
 #include "../lib/fenetre.h"
+
+
 // Function to create a new Fenetre
 // Function to create a new Fenetre with default values
 Fenetre* fenetre_new(gchar *id,int type) {

@@ -14,7 +14,9 @@ set(CMAKE_C_STANDARD 11)
 add_executable(ILISI_GTK main.c
 
         src/fenetre.c
-        lib/fenetre.h)
+        lib/fenetre.h
+        lib/structure.h
+        lib/global.h)
 
 
 # Link against GTK3 libraries
