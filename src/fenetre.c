@@ -12,7 +12,7 @@ Fenetre* fenetre_new(gchar *id,int type) {
     else
         fenetre->window = gtk_window_new(GTK_WINDOW_POPUP);
     fenetre->titre = "Default Title";
-    fenetre->icon = "src/img/gears-solid.svg";
+    fenetre->icon = NULL;
     fenetre->size.largeur = 200;
     fenetre->size.hauteur = 200;
     fenetre->position.x = 0;
@@ -31,8 +31,13 @@ void fenetre_set_title(Fenetre *fenetre, gchar *titre) {
 
 // Function to set the icon of a Fenetre
 void fenetre_set_icon(Fenetre *fenetre, gchar *icon) {
+    GError *error = NULL;
+
     fenetre->icon = icon;
-    gtk_window_set_icon_from_file(GTK_WINDOW(fenetre->window), icon, NULL);
+    if (!gtk_window_set_icon_from_file(GTK_WINDOW(fenetre->window), icon, &error)) {
+        g_printerr("Error loading icon: %s\n", error->message);
+        g_error_free(error);
+    }
 }
 
 // Function to set the size of a Fenetre
