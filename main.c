@@ -1,23 +1,29 @@
 #include <gtk/gtk.h>
+#include "src/Macros/structure.h" // Include the header file for Fenetre structure and its functions
 
 int main(int argc, char *argv[]) {
-    GtkWidget *window;
-    GtkWidget *image;
+    Fenetre *fenetre;
 
     gtk_init(&argc, &argv);
 
-    window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-    gtk_window_set_default_size(GTK_WINDOW(window), 200, 200);
+    // Create a new Fenetre
+    fenetre = fenetre_new("1", TRUE);
 
-    // Load an icon using its name
-    image = gtk_image_new_from_icon_name("document-save", GTK_ICON_SIZE_DIALOG);
+    // Set the Fenetre title
+    fenetre_set_title(fenetre, "Fenetre Window");
 
-    gtk_container_add(GTK_CONTAINER(window), image);
+    // Set the Fenetre size
+    Taille size = {200, 200};
+    fenetre_set_size(fenetre, size);
 
-    gtk_widget_show_all(window);
+    // Show the Fenetre
+    gtk_widget_show(fenetre->window);
 
-    g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
+    // Connect the "destroy" event to the gtk_main_quit function
+    // This will cause the application to exit when the window is closed
+    g_signal_connect(fenetre->window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
 
+    // Start the GTK main event loop
     gtk_main();
 
     return 0;

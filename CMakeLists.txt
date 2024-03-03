@@ -12,7 +12,10 @@ link_directories(${GTK3_LIBRARY_DIRS})
 set(CMAKE_C_STANDARD 11)
 
 add_executable(ILISI_GTK main.c
-        src/Structure/structures.c)
+
+        src/fenetre.c
+        lib/fenetre.h)
+
 
 # Link against GTK3 libraries
 target_link_libraries(ILISI_GTK ${GTK3_LIBRARIES})
