@@ -19,4 +19,4 @@ build/
 # Ignore other files
 *.swp
 *~
-*.bak
+*.bakcmake-build-debug/
