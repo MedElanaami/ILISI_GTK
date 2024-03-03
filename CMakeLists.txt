@@ -16,7 +16,9 @@ add_executable(ILISI_GTK main.c
         src/fenetre.c
         lib/fenetre.h
         lib/structure.h
-        lib/global.h)
+        lib/global.h
+        src/app.c
+        lib/app.h)
 
 
 # Link against GTK3 libraries
