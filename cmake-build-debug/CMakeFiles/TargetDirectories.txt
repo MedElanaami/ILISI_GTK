@@ -1,3 +1,0 @@
-/home/med/Documents/ILISI/ILISI_GTK/cmake-build-debug/CMakeFiles/ILISI_GTK.dir
-/home/med/Documents/ILISI/ILISI_GTK/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/med/Documents/ILISI/ILISI_GTK/cmake-build-debug/CMakeFiles/rebuild_cache.dir
