@@ -6,7 +6,14 @@
 #define ILISI_GTK_ZONETEXTE_H
 #include "global.h"
 
-// Création d'une zone de texte
+// Structure pour la zone de texte
+typedef struct {
+    GtkWidget* zone;
+    GtkWidget* conteneur;
+    gint max_car;
+    gchar* texte;
+} zone_texte;
+
 //prototype de la fonction
 zone_texte* initialiser_zone_texte(GtkWidget* conteneur);
 void creation_zone_texte(zone_texte* zt);
