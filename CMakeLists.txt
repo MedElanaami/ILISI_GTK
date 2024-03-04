@@ -26,7 +26,8 @@ add_executable(ILISI_GTK main.c
         src/box.c
         lib/box.h
         src/bouton.c
-        lib/bouton.h)
+        lib/bouton.h
+        "lib/FormatageDeTexte .h")
 
 
 # Link against GTK3 libraries
