@@ -20,7 +20,9 @@ add_executable(ILISI_GTK main.c
         src/app.c
         lib/app.h
         src/zoneTexte.c
-        lib/zoneTexte.h)
+        lib/zoneTexte.h
+        src/zoneMotPasse.c
+        lib/zoneMotPasse.h)
 
 
 # Link against GTK3 libraries
