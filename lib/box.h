@@ -2,7 +2,7 @@
 #ifndef ILISI_GTK_BOX_H
 #define ILISI_GTK_BOX_H
 #include "global.h"
-///*************************box***************************************************
+
 ///structure de box
 typedef struct
 { GtkWidget* box; //Le box

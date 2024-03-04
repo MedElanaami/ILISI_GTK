@@ -16,6 +16,4 @@
 #include "FormatageDeTexte.h"
 #include "menus.h"
 
-
-
 #endif //ILISI_GTK_GLOBAL_H

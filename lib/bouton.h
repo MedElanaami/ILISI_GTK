@@ -1,42 +1,44 @@
-//
-
 #ifndef ILISI_GTK_BOUTON_H
 #define ILISI_GTK_BOUTON_H
 #include "global.h"
-// structure des boutons simple
-typedef struct BT
+// structure d'un bouton simple
+typedef struct
 {
-    GtkWidget *btn;  //LE BOUTON
-    GtkStockItem *icone; //Un pointeur vers un objet GtkStockItem. GTK utilise des icônes standard appelées "stock items" pour représenter des actions courantes
+    GtkWidget *button;  // The button widget
+    char *id; // The id of the button
+    char *nom_action; // A boolean to indicate if the label has a mnemonic (activated with ALT + associated letter)
+    char *label; // The label of the button
+    int on_focus; // A boolean to indicate if the button is focused
+    char position; // lEFT or RIGHT or TOP or BOTTOM
+    int is_img; // A boolean to indicate if the button has an image
+    GtkWidget *parent; // Reference to the parent container or window of the button in the GTK user interface
+} Bouton;
+
+//Structure d'un bouton radio
+typedef struct Bouton_radio
+{
+    GtkWidget *bouton_radio;
+    char *id;
+    char *nom_action;
     char *label;
-    int boolean; //un label avec mnémonique ou non (activer a l'aide ALT+ lettre qui associe )
-    GtkWidget *parent; //pour faire référence au conteneur ou à la fenêtre parente du bouton dans l'interface utilisateur GTK.
-}bouton;
+    char position; // lEFT or RIGHT or TOP or BOTTOM
+    int is_active; // A boolean to indicate if the button is active
+    int is_focus; // A boolean to indicate if the button is focused
+    int is_img; // A boolean to indicate if the button has an image
+}Bouton_radio;
 
-
-//les boutons à choix unique(radio):
-
-typedef struct liste_radio
+//Structure d'un bouton de type check
+typedef struct Bouton_check
 {
-    GtkWidget *btRadio;
-    char nom[30];
-    struct liste_radio *svt;
-}bouton_radio;
-
-//l'ensemble des boutons radio avec leur parent
-typedef struct radio
-{
-    GtkWidget *parent;
-    bouton_radio *liste;
-}radio;
+    GtkWidget *bouton_check;
+    char *id;
+    char *label;
+    char *nom_action;
+    char position; // lEFT or RIGHT or TOP or BOTTOM
+    int is_active; // A boolean to indicate if the button is active
+    int is_focus; // A boolean to indicate if the button is focused
+    int is_img; // A boolean to indicate if the button has an image
+}Bouton_check;
 
 
-
-// les boutons à choix multiple
-typedef struct BTMLTP
-{
-    GtkWidget *btCheck;
-    char nom[30];
-    GtkWidget *parent;
-}bouton_Check;
 #endif //ILISI_GTK_BOUTON_H

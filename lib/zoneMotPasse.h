@@ -1,6 +1,3 @@
-//
-// Created by med on 3/4/24.
-//
 
 #ifndef ILISI_GTK_ZONEMOTPASSE_H
 #define ILISI_GTK_ZONEMOTPASSE_H

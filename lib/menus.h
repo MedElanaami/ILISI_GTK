@@ -4,37 +4,18 @@
 
 #include "global.h"
 #include "box.h"
+
 // Menus
-
 typedef struct
 {
-    GtkWidget *Menu; // L'element
-    char *Libelle ;
-}Menu_S;
+    GtkWidget *menu;  // The menu widget
+} Menu;
 
-// Bare De Menu_
+Menu* menu_new() {
+    Menu *newMenu = (Menu*)malloc(sizeof(Menu));
+    newMenu->menu = gtk_menu_new();
+    return newMenu;
+}
 
-typedef struct
-{
-    boxObject *Boite;
-    GtkWidget *Menu_;
-}Menu_Bar;
-
-// Itms Menu_
-
-typedef struct
-{
-    char *Label;
-    GtkWidget *Pere;
-    GtkWidget *Itms;
-}Itms_Menu;
-
-// List Deroulante
-
-typedef struct
-{
-    char *Label;
-    GtkWidget *Pere;
-}Liste;
 
 #endif //ILISI_GTK_MENUS_H
