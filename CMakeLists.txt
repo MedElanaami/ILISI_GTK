@@ -15,7 +15,7 @@ add_executable(ILISI_GTK main.c
 
         src/fenetre.c
         lib/fenetre.h
-        lib/structure.h
+        lib/Position.h
         lib/global.h
         src/app.c
         lib/app.h
@@ -27,7 +27,8 @@ add_executable(ILISI_GTK main.c
         lib/box.h
         src/bouton.c
         lib/bouton.h
-        "lib/FormatageDeTexte .h")
+        "lib/FormatageDeTexte .h"
+        lib/Taille.h)
 
 
 # Link against GTK3 libraries
