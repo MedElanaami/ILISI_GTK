@@ -16,6 +16,6 @@ typedef struct
     gchar type; //le type du box (horizontal ou vertical)
     gint homogene; //Homogene ou pas
     gint espace;// l'espace entre les widgets du box
-}box_object;
+}boxObject;
 
 #endif //ILISI_GTK_BOX_H
