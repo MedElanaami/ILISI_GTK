@@ -26,4 +26,12 @@ typedef struct {
     gchar *id; // Unique identifier for the window
     GList *children; // List of child widgets
 } Fenetre;
+
+// Structure pour la zone de texte
+typedef struct {
+    GtkWidget* zone;
+    GtkWidget* conteneur;
+    gint max_car;
+    gchar* texte;
+} zone_texte;
 #endif //ILISI_GTK_STRUCTURE_H
