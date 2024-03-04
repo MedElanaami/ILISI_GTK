@@ -3,6 +3,7 @@
 #define ILISI_GTK_MENUS_H
 
 #include "global.h"
+#include "box.h"
 // Menus
 
 typedef struct
