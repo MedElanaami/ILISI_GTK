@@ -13,7 +13,7 @@
 #include "box.h"
 #include "zoneMotPasse.h"
 #include "zoneTexte.h"
-#include "FormatageDeTexte .h"
+#include "FormatageDeTexte.h"
 #include "menus.h"
 
 

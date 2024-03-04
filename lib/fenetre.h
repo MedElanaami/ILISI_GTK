@@ -2,7 +2,8 @@
 #ifndef ILISI_GTK_FENETRE_H
 #define ILISI_GTK_FENETRE_H
 #include "global.h"
-
+#include "Position.h"
+#include "Taille.h"
 // Structure for a window
 typedef struct {
     GtkWidget *window; // GtkWidget is a base class for all widgets
