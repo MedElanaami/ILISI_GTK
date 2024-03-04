@@ -24,7 +24,9 @@ add_executable(ILISI_GTK main.c
         src/zoneMotPasse.c
         lib/zoneMotPasse.h
         src/box.c
-        lib/box.h)
+        lib/box.h
+        src/bouton.c
+        lib/bouton.h)
 
 
 # Link against GTK3 libraries
