@@ -1,5 +1,5 @@
 
-#include "../lib/bouton.h"
+#include "../lib/global.h"
 //initialisation d'un bouton
 bouton*init_bouton(GtkWidget *parent, GtkStockItem *icone,char texte[20]
         ,int boolean)
@@ -66,38 +66,38 @@ radio* associer_groupe_radio( bouton_radio *liste,GtkWidget* parent)
 
 //step3:fait le parcours de toute la liste créer les boutons radios ensuite ajouter à leur parent
 
-void creation_radio_bouton(radio* rad)
-{
-    /*creation de premier bouton radio */
-    /* if(rad->liste)
-       { rad->liste->btRadio=gtk_radio_button_new_with_label(NULL,rad->liste->nom);
-         ajouter_container(rad->parent,rad->liste->btRadio);
-       }
-       else return;
-     */
-    //bouton_radio *l=rad->liste->svt;
-    bouton_radio *l=rad->liste;
-    while(l)
-    { //ajout des boutons radio de la liste
-        l->btRadio=gtk_radio_button_new_with_label_from_widget
-                (GTK_RADIO_BUTTON(rad->liste->btRadio),l->nom);
-
-        //ajouter au container
-        ajouter_container(rad->parent,l->btRadio);
-        l=l->svt;
-    }//fin while
-}
-
-
-
-//creation des boutons à choix multipe
-
-void creation_check_bouton(bouton_Check *check)
-{
-    check->btCheck=gtk_check_button_new_with_label(check->nom);
-    //ajouter au container
-    ajouter_container(check->parent,check->btCheck);
-}
+//void creation_radio_bouton(radio* rad)
+//{
+//    /*creation de premier bouton radio */
+//    /* if(rad->liste)
+//       { rad->liste->btRadio=gtk_radio_button_new_with_label(NULL,rad->liste->nom);
+//         ajouter_container(rad->parent,rad->liste->btRadio);
+//       }
+//       else return;
+//     */
+//    //bouton_radio *l=rad->liste->svt;
+//    bouton_radio *l=rad->liste;
+//    while(l)
+//    { //ajout des boutons radio de la liste
+//        l->btRadio=gtk_radio_button_new_with_label_from_widget
+//                (GTK_RADIO_BUTTON(rad->liste->btRadio),l->nom);
+//
+//        //ajouter au container
+//        ajouter_container(rad->parent,l->btRadio);
+//        l=l->svt;
+//    }//fin while
+//}
+//
+//
+//
+////creation des boutons à choix multipe
+//
+//void creation_check_bouton(bouton_Check *check)
+//{
+//    check->btCheck=gtk_check_button_new_with_label(check->nom);
+//    //ajouter au container
+//    ajouter_container(check->parent,check->btCheck);
+//}
 
 
 

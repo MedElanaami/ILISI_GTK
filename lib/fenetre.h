@@ -16,6 +16,19 @@ typedef struct {
     gchar *id; // Unique identifier for the window
     GList *children; // List of child widgets
 } Fenetre;
+
+//Structure pour header bar
+typedef struct {
+    GtkWidget *header_bar;
+    GtkWidget *conteneur;
+    gchar *titre;
+    gchar *sous_titre;
+    gchar *icon;
+    gint spacing;
+    gint nbr_items;
+    gchar *id;
+} HeaderBar;
+
 //prototypes des fonctions
 Fenetre* fenetre_new(char*id,int type);
 void fenetre_set_title(Fenetre *fenetre,gchar *titre);
